@@ -1,0 +1,28 @@
+Analytical Qestions:
+
+Q 1:  Create the CSV files according to the provided database schema, ensuring that all constraints and relationships among tables are properly reflected, and then import them into pgAdmin ? (If you prefer using a different RDBMS, ensure to adjust the syntax accordingly throughout the queries)
+
+Q 2: From the tables you created find, for each venue, the average number of runs scored per match (total of both teams) in the stadium? 
+In order to calculate total run, you must sum runs_scored & extra_runs from ball_by_ball table.
+
+Q 3: Find players who faced the maximum number of balls per match on average and limit your answer to the top 10? 
+A batsman faced a ball if there is an entry in ball_by_ball with that player as the striker.
+
+Q 4: Find players who are the most frequent six hitters? 
+that is, players who hit a 6 in the highest fraction of balls that they face. Output the player id, player name, the number of times the player has got 6 runs in a ball, the number of balls faced, and the fraction of 6s.
+
+Q 5: Find top 3 batsmen and top 3 bowlers player_ids who got highest no of runs and highest no of wickets respectively in each season?
+Output (season_year, batsman, runs, bowler, wickets). Here batsman & bowler are player_ids of the players. Incase of ties output the player with lesser player_id first. Order by season_year (earlier year comes first) and rank(batsman and bowler with more no of runs and wickets in a particular season comes first). There will be (no_of_seasons*3) rows.
+
+Q 6: Write an SQL query to find the IDs of players who achieved the highest number of partnership runs for each match? The output should include (match_id, player1, runs1, player2, runs2), sorted in descending order of partnership runs. In case of ties, the match_id should be sorted in ascending order. Ensure that runs1 is greater than runs2 in every row, and if runs1 equals runs2, then player1_id should be greater than player2_id. Note that extra_runs should not be included in the count. There can be multiple rows for each match if different players achieve equal partnership runs multiple times.
+
+Q 7: For all the matches with win type as wickets, find the over ids in which the runs scored are less than 6 runs? Output (match_id, innings_no, over_id). Note : Runs scored in an over also include the extra_runs.
+
+Q 8: List top 5 batsmen by number of sixes hit in the season 2013 ? 
+Output (player_name).
+
+Q 9: List 5 bowlers by lowest strike rate(average number of balls bowled per wicket taken) in the season 2013? Break ties alphabetically. Output (player_name).
+
+Q 10: For each country(with at least one player bowled out) find out the number of its players who were bowled out in any match? Output (country_name, count). Here the country is the home country of the player.
+
+Q 11: List the names of right- handed players who have scored at least a century in any match played in 'Pune' ? Order the output alphabetically on player_name. Output (player_name, run).
